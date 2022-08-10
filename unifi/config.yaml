@@ -1,5 +1,5 @@
 ---
-name: UniFi Network Application
+name: UniFi Network Application (Radius)
 version: dev
 slug: unifi
 description: Manage your UniFi network using a web browser
@@ -25,6 +25,8 @@ ports:
   8843/tcp: 8843
   8880/tcp: 8880
   10001/udp: 10001
+  1812/udp: 1812
+  1813/udp: 1813
 ports_description:
   161/udp: Used for SNMP Access
   1900/udp: L2 discoverable port
@@ -36,6 +38,8 @@ ports_description:
   8843/tcp: Used for HTTPS portal redirection
   8880/tcp: Used for HTTP portal redirection
   10001/udp: Used for device discovery
+  1812/udp: Radius
+  1813/udp: Radius
 hassio_api: true
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
